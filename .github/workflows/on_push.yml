@@ -32,4 +32,4 @@ jobs:
     - name: Push Docker image
       run: |
         echo "Pushing image to GCR..."
-        docker push --debug stefanmita1234/apache-beam-dataflow:${{ github.sha }}
+        docker push stefanmita1234/apache-beam-dataflow:${{ github.sha }}
