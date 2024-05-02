@@ -18,14 +18,10 @@ jobs:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         project_id: stefan-work  # Replace with your GCP project ID
 
-    - name: Configure Docker
-      run: |
-        gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
-
     - name: Build Maven
       run: mvn clean install
 
-    - name: Build and push Docker image
+    - name: Build Docker image
       run: |
         docker build -t stefanmita1234/apache-beam-dataflow:${{ github.sha }} .
 
