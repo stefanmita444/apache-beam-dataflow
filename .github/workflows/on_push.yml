@@ -21,6 +21,9 @@ jobs:
     - name: Configure Docker
       run: gcloud auth configure-docker
 
+    - name: Build Maven
+      run: mvn clean package
+
     - name: Build and push Docker image
       run: |
         docker build -t gcr.io/stefan-work/pipeline:${{ github.sha }} .
