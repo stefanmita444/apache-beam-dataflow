@@ -26,5 +26,5 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t gcr.io/stefan-work/pipeline:${{ github.sha }} .
-        docker push gcr.io/stefan-work/pipeline:${{ github.sha }}
+        docker build -t us-central1-docker.pkg.dev/stefan-work/pipeline:${{ github.sha }} .
+        docker push us-central1-docker.pkg.dev/stefan-work/pipeline:${{ github.sha }}
