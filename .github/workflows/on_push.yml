@@ -22,7 +22,7 @@ jobs:
       run: gcloud auth configure-docker
 
     - name: Build Maven
-      run: mvn clean package
+      run: mvn clean install
 
     - name: Build and push Docker image
       run: |
