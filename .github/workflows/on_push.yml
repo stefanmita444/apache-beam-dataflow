@@ -27,5 +27,6 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
+        file: ./Dockerfile
         push: true
         tags: stefanmita1234/apache-beam-dataflow:v1
